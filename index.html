@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Card</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="card">
+
+            <!-- Landscape Section -->
+            <section class="landscape-section">
+                <div class="sky"></div>
+                <div class="moon">
+                    <div class="shine-1"></div>
+                    <div class="shine-2"></div>
+                    <div class="real-moon">
+                        <div class="moon-shape"></div>
+                    </div>
+                </div>
+                <div class="hill-1"></div>
+                <div class="hill-2"></div>
+                <div class="ocean">
+                    <div class="reflection"></div>
+                    <div class="reflection"></div>
+                    <div class="reflection"></div>
+                    <div class="reflection"></div>
+                    <div class="reflection"></div>
+                    <div class="shadow-hill-1"></div>
+                    <div class="shadow-hill-2"></div>
+                </div>
+                <div class="hill-3"></div>
+                <div class="hill-4"></div>
+                <!-- Add trees here if needed -->
+                <div class="filter"></div>
+            </section>
+
+            <!-- Content Section -->
+            <section class="content-section">
+
+                <!-- Status message -->
+                <div id="status">Loading weather...</div>
+
+                <!-- Weather card (hidden until API returns) -->
+                <div id="weather" class="weather-info" hidden>
+                    <div class="left-side">
+                        <div class="icon">
+                            <img id="icon" alt="Weather icon">
+                        </div>
+                        <p id="desc"></p>
+                    </div>
+                    <div class="right-side">
+                        <div class="location">
+                            <span id="place"></span>
+                        </div>
+                        <p id="temp"></p>
+                    </div>
+                </div>
+                <div class="bill">
+                    <div class="input_label">
+                        <label for="previous" title="Previous reading">Previous:</label>
+                        <input type="text" name="previous" id="previous">
+                        <label for="current" title="Current reading">Current:</label>
+                        <input type="text" name="current" id="current">
+                        <label for="price" title="Price per unit">PPU:</label>
+                        <input type="text" name="price" id="price">
+                    </div>
+                    <button id="calculateBtn">Calculate</button>
+                    <div id="billOutput" class="bill-output"></div>
+                </div>
+
+                <!-- Optional forecast section -->
+                <div class="forecast">
+                </div>
+
+            </section>
+
+        </div>
+    </div>
+
+    <!-- JS -->
+    <script src="index.js" defer></script>
+</body>
+
+</html>
