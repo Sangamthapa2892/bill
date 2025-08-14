@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Block unnecessary files from being indexed
+Disallow: /index.css
+Disallow: /index.js
+
+# Sitemap location
+Sitemap: https://sangamthapa2892.github.io/bill/sitemap.xml
