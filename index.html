@@ -4,41 +4,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Home Bill & Weather App | Electricity Calculator & Live Weather</title>
 
     <!-- SEO Meta Tags -->
-    <meta name="description"
-        content="Home Bill & Weather App – Calculate your electricity bill and check the weather in your city easily.">
-    <meta name="keywords"
-        content="home bill calculator, electricity bill, weather app, temperature, forecast, online tools">
+    <meta name="description" content="Home Bill & Weather App – Calculate your electricity bill and check live weather for your city instantly.">
+    <meta name="keywords" content="electricity bill calculator, weather app, temperature checker, forecast, home utility tools">
     <meta name="author" content="Your Name">
 
     <!-- Open Graph / Social Sharing -->
     <meta property="og:title" content="Home Bill & Weather App">
-    <meta property="og:description" content="Calculate your electricity bill and check your local weather quickly.">
+    <meta property="og:description" content="Calculate your electricity bill and check your local weather instantly.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://sangamthapa2892.github.io/bill/">
-    <meta property="og:image" content="https://sangamthapa2892.github.io/bill/images/fav.png">
+    <meta property="og:url" content="https://yourusername.github.io/your-repo-name/">
+    <meta property="og:image" content="https://yourusername.github.io/your-repo-name/preview-image.png">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Home Bill & Weather App">
-    <meta name="twitter:description" content="Calculate your electricity bill and check your local weather quickly.">
-    <meta name="twitter:image" content="https://sangamthapa2892.github.io/bill/images/fav.png">
+    <meta name="twitter:description" content="Calculate your electricity bill and check your local weather instantly.">
+    <meta name="twitter:image" content="https://yourusername.github.io/your-repo-name/preview-image.png">
 
     <!-- Favicon -->
-    <link rel="icon" href="https://sangamthapa2892.github.io/bill/images/fav.png" type="image/x-icon">
-    <title>Weather Card</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="index.css">
-    
 </head>
 
 <body>
     <div class="main">
         <div class="card">
 
+            <!-- Page Heading for SEO -->
+            <header>
+                <h1>Home Bill & Weather App</h1>
+                <h2>Electricity Bill Calculator & Live Local Weather</h2>
+            </header>
+
             <!-- Landscape Section -->
-            <section class="landscape-section">
+            <section class="landscape-section" aria-hidden="true">
                 <div class="sky"></div>
                 <div class="moon">
                     <div class="shine-1"></div>
@@ -60,7 +65,6 @@
                 </div>
                 <div class="hill-3"></div>
                 <div class="hill-4"></div>
-                <!-- Add trees here if needed -->
                 <div class="filter"></div>
             </section>
 
@@ -70,11 +74,11 @@
                 <!-- Status message -->
                 <div id="status">Loading weather...</div>
 
-                <!-- Weather card (hidden until API returns) -->
+                <!-- Weather card -->
                 <div id="weather" class="weather-info" hidden>
                     <div class="left-side">
                         <div class="icon">
-                            <img id="icon" alt="Weather icon">
+                            <img id="icon" alt="Weather condition icon">
                         </div>
                         <p id="desc"></p>
                     </div>
@@ -85,22 +89,25 @@
                         <p id="temp"></p>
                     </div>
                 </div>
+
+                <!-- Electricity Bill Calculator -->
                 <div class="bill">
                     <div class="input_label">
                         <label for="previous" title="Previous reading">Previous:</label>
-                        <input type="text" name="previous" id="previous">
+                        <input type="number" name="previous" id="previous" min="0" step="any">
+
                         <label for="current" title="Current reading">Current:</label>
-                        <input type="text" name="current" id="current">
+                        <input type="number" name="current" id="current" min="0" step="any">
+
                         <label for="price" title="Price per unit">PPU:</label>
-                        <input type="text" name="price" id="price">
+                        <input type="number" name="price" id="price" min="0" step="any">
                     </div>
                     <button id="calculateBtn">Calculate</button>
                     <div id="billOutput" class="bill-output"></div>
                 </div>
 
                 <!-- Optional forecast section -->
-                <div class="forecast">
-                </div>
+                <div class="forecast"></div>
 
             </section>
 
