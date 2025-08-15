@@ -369,31 +369,31 @@ body {
   border-radius: 1px;
 }
 .bill {
-  position: absolute;
-  top: 180px; /* adjust as needed */
+  position: absolute; /* allow it to flow naturally below weather-info */
+  top: 160px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  align-items: center;
+  gap: 5px;
   width: 80%;
+  max-width: 500px;
+  margin: 10px auto 0 auto;
   padding: 20px;
   background-color: transparent;
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  z-index: 20; /* above weather card */
+  z-index: 20;
 }
 
 .bill label {
   font-weight: 600;
   font-size: 14px;
-  margin-bottom: 5px;
   color: #333;
 }
-.input_label{
-  display: inline;
-}
-/* bill */
+
 .bill input {
-  width: 50px;
+  width: 100%;
+  max-width: 300px;
   padding: 10px;
   font-size: 14px;
   border: 1px solid #ccc;
@@ -401,13 +401,16 @@ body {
   outline: none;
   transition: border 0.2s, box-shadow 0.2s;
 }
+
 .bill input:focus {
   border-color: #4a90e2;
   box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
 }
 
 .bill button {
-  padding: 10px;
+  width: 100%;
+  max-width: 200px;
+  padding: 5px;
   font-size: 14px;
   font-weight: 600;
   color: white;
@@ -420,10 +423,4 @@ body {
 
 .bill button:hover {
   background-color: #357ABD;
-}
-
-@media screen and (max-width:600px) {
-  .bill.input_label.label{
-    display: block;
-  }
 }
