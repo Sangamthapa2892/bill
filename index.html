@@ -4,12 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <title>Home Bill & Weather App | Electricity Calculator & Live Weather</title>
 
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Home Bill & Weather App – Calculate your electricity bill and check live weather for your city instantly.">
-    <meta name="keywords" content="electricity bill calculator, weather app, temperature checker, forecast, home utility tools">
+    <meta name="description"
+        content="Home Bill & Weather App – Calculate your electricity bill and check live weather for your city instantly.">
+    <meta name="keywords"
+        content="electricity bill calculator, weather app, temperature checker, forecast, home utility tools">
     <meta name="author" content="Sangam Thapa">
 
     <!-- Open Graph / Social Sharing -->
@@ -29,13 +31,13 @@
     <link rel="icon" href="https://sangamthapa2892.github.io/bill/images/fav.png" type="image/x-icon">
 
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="https://sangamthapa2892.github.io/bill/index.css">
+    <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
     <div class="main">
         <div class="head">
-             <header>
+            <header>
                 <h1>Home Bill & Weather App</h1>
                 <h2>Electricity Bill Calculator & Live Local Weather</h2>
             </header>
@@ -65,7 +67,9 @@
                 </div>
                 <div class="hill-3"></div>
                 <div class="hill-4"></div>
-                <div class="filter"></div>
+                <div class="filter">
+                    
+                </div>
             </section>
 
             <!-- Content Section -->
@@ -75,20 +79,23 @@
                 <div id="status">Loading weather...</div>
 
                 <!-- Weather card -->
-                <div id="weather" class="weather-info" hidden>
-                    <div class="left-side">
-                        <div class="icon">
-                            <img id="icon" alt="Weather condition icon">
+                <div class="weather-div">
+                    <div id="weather" class="weather-info" hidden>
+                        <div class="left-side">
+                            <div class="icon">
+                                <img id="icon" alt="Weather condition icon">
+                            </div>
+                            <p id="desc"></p>
                         </div>
-                        <p id="desc"></p>
-                    </div>
-                    <div class="right-side">
-                        <div class="location">
-                            <span id="place"></span>
+                        <div class="right-side">
+                            <div class="location">
+                                <span id="place"></span>
+                            </div>
+                            <p id="temp"></p>
                         </div>
-                        <p id="temp"></p>
                     </div>
                 </div>
+
 
                 <!-- Electricity Bill Calculator -->
                 <div class="bill">
@@ -102,6 +109,7 @@
                         <label for="price" title="Price per unit">PPU:</label>
                         <input type="number" name="price" id="price" min="0" step="any">
                     </div>
+                    <br>
                     <button id="calculateBtn">Calculate</button>
                     <div id="billOutput" class="bill-output"></div>
                 </div>
